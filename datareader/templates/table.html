@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Table</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>First Rating Indicators</th>
+            <th>Expected Results</th>
+            <th>Points</th>
+            <th>Status</th>
+            <th>Notes</th>
+        </tr>
+        {% for entry in data %}
+        <tr>
+            <td>{{ entry.first_ratings }}</td>
+            <td>{{ entry.expected_results }}</td>
+            <td>{{ entry.points }}</td>
+            <td>{{ entry.status }}</td>
+            <td>{{ entry.notes }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

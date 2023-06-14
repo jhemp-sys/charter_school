@@ -1,0 +1,90 @@
+.excel-tabs {
+    display: flex;
+    justify-content: flex-start;
+    }
+
+    .excel-tab {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        cursor: pointer;
+    }
+
+    .excel-content {
+        display: none;
+        border: 1px solid #007bff;
+        border-top: none;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        padding: 10px;
+    }
+
+    .excel-content.active {
+        display: block;
+    }
+    .excel-content table {
+    width: 100%;
+    border-collapse: collapse;
+    }
+
+    .excel-content table th,
+    .excel-content table td {
+        border: 1px solid black;
+        padding: 8px;
+    }
+
+    .excel-content table td {
+        text-align: center;
+    }
+
+    .excel-content table tbody tr:first-child td {
+        text-align: left;
+    }
+
+    .excel-content h1, .excel-content h2 {
+        text-align: center;
+        margin: 3px 0px;
+    }
+
+    .centered-column {
+        text-align: center;
+    }
+    .custom-header {
+        background-color: #92D050;
+    }
+    .dataframe {
+        border-collapse: collapse;
+    }
+    .dataframe, th, td {
+        border: 1px solid black;
+        padding: 8px;
+
+    }
+    #included-content {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    .img-oval{
+        text-align: center;
+        vertical-align: middle;
+    }
+    .image-container {
+        position: relative;
+    }
+
+    .image-container img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 50px;
+        max-height: 35px;
+    }

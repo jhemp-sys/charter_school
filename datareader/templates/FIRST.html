@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-lg-9">
+        <h2>YOUR CHARTER SCHOOL</h2>
+        <h2>FY2022-2023 Charter FIRST Forecast as of January 31, 2023</h2>
+    </div>
+    <div class="col-lg-3">
+        <form method="post" action="{% url 'data_upload' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="input-group">
+                <input type="file" name="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" required>
+                <button class="btn btn-outline-secondary" type="submit" id="inputGroupFileAddon04">Go</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<table class="dataframe">
+    <thead class="custom-header">
+        <tr style="text-align: center; font-weight: bold;">
+        <td>FIRST Rating Indicators</td>
+        <td>Expected Results</td>
+        <td>Points</td>
+        <td>Status</td>
+        <td>Notes</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in data %}
+        <tr>
+            <td>{{ entry.first_ratings }}</td>
+            <td>{{ entry.expected_results }}</td>
+            <td>{{ entry.points }}</td>
+            <td>{{ entry.status }}</td>
+            <td>{{ entry.notes }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

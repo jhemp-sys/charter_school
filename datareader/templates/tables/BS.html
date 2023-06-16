@@ -1,0 +1,53 @@
+<div class="row  my-4">
+    <div class="col-lg-12">
+        <h2>YOUR CHARTER SCHOOL</h2>
+        <h2>FY2022-2023 Balance Sheet as of January 31, 2023</h2>
+    </div>
+</div>
+
+<table class="dataframe">
+    <thead class="custom-header">
+        <tr style="text-align: center; font-weight: bold;">
+        <td></td>
+        <td></td>
+        <td>FYE 2022<i class="bi bi-plus-square-fill" id="addButton"><i class="bi bi-dash-square-fill" id="minusButton"></i></i></td>
+        <td class="hidden-column">September</td>
+        <td class="hidden-column">October</td>
+        <td class="hidden-column">November</td>
+        <td class="hidden-column">December</td>
+        <td class="hidden-column">January</td>
+        <td class="hidden-column">February</td>
+        <td class="hidden-column">March</td>
+        <td class="hidden-column">April</td>
+        <td class="hidden-column">May</td>
+        <td class="hidden-column">June</td>
+        <td class="hidden-column">July</td>
+        <td class="hidden-column">August</td>
+        <td>FYTD Activity</td>
+        <td>As of January</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for bs in data.bs %}
+        <tr>
+            <td data-name="{{ bs.titles}}">{{ bs.titles}}</td>
+            <td data-name="{{ bs.extra}}">{{ bs.extra}}</td>
+            <td data-name="{{ bs.fye_year}}">{{ bs.fye_year}}</td>
+            <td data-name="{{ bs.september }}" class="hidden-column">{{ bs.september }}</td>
+            <td data-name="{{ bs.october }}" class="hidden-column"></td>
+            <td data-name="{{ bs.november }}" class="hidden-column"></td>
+            <td data-name="{{ bs.december }}" class="hidden-column"></td>
+            <td data-name="{{ bs.january }}" class="hidden-column"></td>
+            <td data-name="{{ bs.february }}" class="hidden-column"></td>
+            <td data-name="{{ bs.march }}" class="hidden-column">{{ bs.march }}</td>
+            <td data-name="{{ bs.april }}" class="hidden-column">{{ bs.april }}</td>
+            <td data-name="{{ bs.may }}" class="hidden-column">{{ bs.may }}</td>
+            <td data-name="{{ bs.june }}" class="hidden-column">{{ bs.june }}</td>
+            <td data-name="{{ bs.july }}" class="hidden-column">{{ bs.july }}</td>
+            <td data-name="{{ bs.august }}" class="hidden-column">{{ bs.august }}</td>
+            <td data-name="{{ bs.fytd_activity }}">{{ bs.fytd_activity }}</td>
+            <td data-name="{{ bs.as_of_january }}">{{ bs.as_of_january }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

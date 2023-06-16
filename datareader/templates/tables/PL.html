@@ -1,0 +1,59 @@
+<div class="row  my-4">
+    <div class="col-lg-12">
+        <h2>YOUR CHARTER SCHOOL</h2>
+        <h2>FY2022-2023 Charter FIRST Forecast as of January 31, 2023</h2>
+    </div>
+</div>
+
+<table class="dataframe">
+    <thead class="custom-header">
+        <tr style="text-align: center; font-weight: bold;">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Amende Budget</td>
+        <td>YTD Budget</td>
+        <td>September</td>
+        <td>October</td>
+        <td>November</td>
+        <td>December</td>
+        <td>January</td>
+        <td>February</td>
+        <td>March</td>
+        <td>April</td>
+        <td>May</td>
+        <td>June</td>
+        <td>July</td>
+        <td>August</td>
+        <td>Year-to-Date</td>
+        <td>Variances</td>
+        <td>Var</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pl in data.pl %}
+        <tr>
+            <td>{{ pl.numbers }}</td>
+            <td>{{ pl.titles }}</td>
+            <td>{{ pl.extra }}</td>
+            <td>{{ pl.ammended_budget }}</td>
+            <td>{{ pl.ytd_budget }}</td>
+            <td>{{ pl.september }}</td>
+            <td>{{ pl.october }}</td>
+            <td>{{ pl.november }}</td>
+            <td>{{ pl.december }}</td>
+            <td>{{ pl.january }}</td>
+            <td>{{ pl.february }}</td>
+            <td>{{ pl.march }}</td>
+            <td>{{ pl.april }}</td>
+            <td>{{ pl.may }}</td>
+            <td>{{ pl.june }}</td>
+            <td>{{ pl.july }}</td>
+            <td>{{ pl.august }}</td>
+            <td>{{ pl.year_to_date }}</td>
+            <td>{{ pl.variances }}</td>
+            <td>{{ pl.var }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

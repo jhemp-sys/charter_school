@@ -21,6 +21,10 @@ from datareader.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main, name='main'),
-    path('upload/', post, name='data_upload'),
+    path('upload/', upload, name='data_upload'),
+    path('upload/first', first_post, name='first_post'),
+    path('upload/bs', bs_post, name='bs_post'),
+    path('upload/pl', pl_post, name='pl_post'),
+    # path('table/bs', bs, name='bs'),
     # path('table/', DataTableView.as_view(), name='data_table'),
 ]
